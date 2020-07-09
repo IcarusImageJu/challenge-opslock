@@ -3,7 +3,13 @@ import {TouchableHighlight, Text} from 'react-native';
 
 import styles from './styles';
 
-function MultiSelectOption({label, children, onPress, selected, theme}) {
+function MultiSelectOption({
+  label = '',
+  children,
+  onPress = () => {},
+  selected = false,
+  theme,
+}) {
   return (
     <TouchableHighlight
       style={[

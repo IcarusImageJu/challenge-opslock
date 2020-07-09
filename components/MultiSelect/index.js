@@ -5,16 +5,15 @@ import styles from './styles';
 
 function MultiSelect({
   options = [],
-  selected,
+  selected = [],
   theme = 'grey',
-  onSelect,
-  title,
+  onSelect = () => {},
+  title = '',
   children,
+  style,
 }) {
-  console.log(selected);
-
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{title || children}</Text>
         {selected.length > 0 && (

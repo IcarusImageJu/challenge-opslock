@@ -38,6 +38,7 @@ function HomePage() {
         title="Select any option"
         onSelect={handleOnSelect}
         theme="teal"
+        style={{backgroundColor: 'transparent'}}
       />
     </View>
   );
