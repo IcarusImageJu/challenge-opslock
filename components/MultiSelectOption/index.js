@@ -1,10 +1,26 @@
 import React from 'react';
 import {TouchableHighlight, Text} from 'react-native';
 
-function MultiSelectOption({label, children, onPress}) {
+import styles from './styles';
+
+function MultiSelectOption({label, children, onPress, selected, theme}) {
   return (
-    <TouchableHighlight onPress={onPress}>
-      <Text>{label || children}</Text>
+    <TouchableHighlight
+      style={[
+        styles.option,
+        theme && {borderColor: theme},
+        selected && styles.optionActive,
+        selected && theme && {backgroundColor: theme},
+      ]}
+      onPress={onPress}>
+      <Text
+        style={[
+          styles.label,
+          theme && {color: theme},
+          selected && styles.labelActive,
+        ]}>
+        {label || children}
+      </Text>
     </TouchableHighlight>
   );
 }

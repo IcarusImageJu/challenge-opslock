@@ -37,7 +37,7 @@ function HomePage() {
         selected={selected}
         title="Select any option"
         onSelect={handleOnSelect}
-        style=""
+        theme="teal"
       />
     </View>
   );
