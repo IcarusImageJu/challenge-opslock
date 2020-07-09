@@ -1,9 +1,9 @@
 import React from 'react';
 import {TouchableHighlight, Text} from 'react-native';
 
-function MultiSelectOption({label, children}) {
+function MultiSelectOption({label, children, onPress}) {
   return (
-    <TouchableHighlight>
+    <TouchableHighlight onPress={onPress}>
       <Text>{label || children}</Text>
     </TouchableHighlight>
   );

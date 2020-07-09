@@ -10,6 +10,8 @@ function MultiSelect({
   title,
   children,
 }) {
+  console.log(selected);
+
   return (
     <View>
       <View>
@@ -18,7 +20,11 @@ function MultiSelect({
       </View>
       <View>
         {options.map(({key, label}) => (
-          <MultiSelectOption key={key} label={label} />
+          <MultiSelectOption
+            key={key}
+            label={label}
+            onPress={() => onSelect(key)}
+          />
         ))}
       </View>
     </View>
